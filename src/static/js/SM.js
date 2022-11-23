@@ -631,7 +631,7 @@ function bnIsProbablePrime(C) { var D, B = this.abs(); if (B.t == 1 && B[0] <= l
             E = D + 1; while (E < lowprimes.length && A < lplim) { A *= lowprimes[E++] } A = B.modInt(A); while (D < E) { if (A % lowprimes[D++] == 0) { return false } } } return B.millerRabin(C) }
 
 function bnpMillerRabin(G) { var H = this.subtract(BigInteger.ONE); var C = H.getLowestSetBit(); if (C <= 0) { return false } var F = H.shiftRight(C);
-    G = (G + 1) >> 1; if (G > lowprimes.length) { G = lowprimes.length } var E = nbi(); 
+    G = (G + 1) >> 1; if (G > lowprimes.length) { G = lowprimes.length } var E = nbi();
 	for (var A = 0; A < G; A += 1) { var ua = new Uint8Array(1);ua[0] = 0;if (window.crypto && window.crypto.getRandomValues) {
 	window.crypto.getRandomValues(ua)} E.fromInt(lowprimes[Math.floor(ua[0] * lowprimes.length / 256)]);
 	var D = E.modPow(F, this); if (D.compareTo(BigInteger.ONE) != 0 && D.compareTo(H) != 0) { var B = 1; while (B++ < C && D.compareTo(H) != 0) { D = D.modPowInt(2, this); if (D.compareTo(BigInteger.ONE) == 0) { return false } } if (D.compareTo(H) != 0) { return false } } } return true } BigInteger.prototype.chunkSize = bnpChunkSize;
@@ -696,7 +696,7 @@ function rng_seed_int(A) { rng_pool[rng_pptr++] ^= A & 255;
 function rng_seed_time() { rng_seed_int(new Date().getTime()) }
 if (rng_pool == null) { rng_pool = [];
     rng_pptr = 0; var t; if (window.crypto && window.crypto.getRandomValues) { var ua = new Uint8Array(32);
-        window.crypto.getRandomValues(ua); for (t = 0; t < 32; t += 1) { rng_pool[rng_pptr++] = ua[t] } } if (navigator.appName == "Netscape" && navigator.appVersion < "5" && window.crypto) { var z = window.crypto.random(32); for (t = 0; t < z.length; t += 1) { rng_pool[rng_pptr++] = z.charCodeAt(t) & 255 } } 
+        window.crypto.getRandomValues(ua); for (t = 0; t < 32; t += 1) { rng_pool[rng_pptr++] = ua[t] } } if (navigator.appName == "Netscape" && navigator.appVersion < "5" && window.crypto) { var z = window.crypto.random(32); for (t = 0; t < z.length; t += 1) { rng_pool[rng_pptr++] = z.charCodeAt(t) & 255 } }
 		rng_pptr = 0;
     rng_seed_time() }
 

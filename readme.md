@@ -29,12 +29,10 @@ npm run build --report
     -dist                   // webpack打包生成目录
     -node_modules           // 第三方模块目录，如果项目没有该目录则需要通过npm install命令联网安装，或者其他方式获取后放到项目中
     -src                    // 源码目录
-        -components         // 业务代码页面组件目录
+        -components         // 公共组件目录
             -home           // 首页目录
             -login          // 登录页目录
             -main           // 三分页结构目录
-            -organizational // 业务代码示例
-            -system         // 业务代码示例
         -config             // 配置文件目录
         -locales            // 国际化文件目录
         -mock				// 模拟数据设置目录，当配置文件中mock为true时根据mock目录下的配置返回模拟数据
@@ -47,7 +45,11 @@ npm run build --report
         	-DataHandle.js	// 提供了一些模型对象扩展方法。
         	-RESTClient.js  // 提供了基于axios的ajax请求方法。
         	-EntityContainer.js //提供了前后端交互数据格式解析。
-```    
+        -views       // 业务代码页面组件目录
+          -organizational // 业务代码示例
+          -system         // 业务代码示例
+
+```
 ### 2.数据交互
 ```javascript
     1）在业务模块中引入DataHandle模块
@@ -62,7 +64,7 @@ npm run build --report
 	    	primaryKey: "id", //主键key，默认为id
     		autoLoad: true //是否自动加载数据，默认true
         }
-        
+
          /*
          dataOption可设置属性有：
             name                                数据返回后要赋值的对象key
@@ -96,7 +98,7 @@ npm run build --report
         msg(p_key, p_args);						获取国际化信息
         */
 
-```    
+```
 ### 3.权限控制
     1) 登录
         在src/config/index.js中可通过config.isRemote属性配置是否开启远程登录、退出及菜单获取。
