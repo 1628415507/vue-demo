@@ -23,7 +23,7 @@ import { filterConfig, tableConfig, columns, operates } from './config-data.js'
 export default {
   mixins: [tableMix],
   data() {
-    let a = 0
+    var a = 0
     return {
       // 查询
       filterConfig: filterConfig(this),
