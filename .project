@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>vue-demo</name>
+	<comment>com.sgcc.uap.ide.microservice.vue.nature</comment>
+	<projects>
+	</projects>
+	<buildSpec>
+	</buildSpec>
+	<natures>
+		<nature>com.sgcc.uap.ide.microservice.vue.nature</nature>
+	</natures>
+</projectDescription>
