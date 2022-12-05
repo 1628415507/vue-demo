@@ -1,3 +1,10 @@
+<!--
+ * @Description:
+ * @Author: Hongzf
+ * @Date: 2022-11-23 14:17:48
+ * @LastEditors: Hongzf
+ * @LastEditTime: 2022-11-30 10:08:19
+-->
 <template>
   <div class="wrapper">
     <div
@@ -53,7 +60,7 @@
 
 <script>
 import authUtil from '@/utils/AuthUtil'
-// import logincss from '@/static/css/login.css'
+import logincss from '@/static/css/login.css'
 
 export default {
   name: 'Login',

@@ -1,3 +1,10 @@
+<!--
+ * @Description:
+ * @Author: Hongzf
+ * @Date: 2022-11-23 14:17:48
+ * @LastEditors: Hongzf
+ * @LastEditTime: 2022-11-30 10:12:01
+-->
 <template>
   <div>
     <div class="logo">
@@ -42,6 +49,9 @@ export default {
     return {
     	  webName: $config.webName
     }
+  },
+  mounted () {
+    console.log('【  $store.state.menus 】-68',  this.$store.state.menus)
   },
   methods: {
     	logout() {
