@@ -1,3 +1,10 @@
+/*
+ * @Description:
+ * @Author: Hongzf
+ * @Date: 2022-11-23 14:17:48
+ * @LastEditors: Hongzf
+ * @LastEditTime: 2022-12-07 13:54:58
+ */
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
@@ -8,6 +15,8 @@ import App from './App'
 
 import router from '@/router'
 import store from '@/store'
+// import echarts from 'echarts'
+// Vue.prototype.$echarts = echarts
 
 if (process.env.NODE_ENV === 'development') {
   require('@/mock/index.js')
