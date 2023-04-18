@@ -1,9 +1,9 @@
 /*
- * @Description: 
+ * @Description:
  * @Author: Hongzf
  * @Date: 2022-11-23 14:17:49
  * @LastEditors: Hongzf
- * @LastEditTime: 2022-12-08 11:30:14
+ * @LastEditTime: 2023-02-06 16:26:04
  */
 export default {
   path: '/system',
@@ -16,7 +16,11 @@ export default {
         {	path: '/system/charts/map-fly',
           name: '地图飞线',
           component: () => import(/* webpackChunkName: "charts" */ '@/views/system/charts/map-fly/index.vue')
-        }
+        },
+        // {	path: '/system/charts/map-3d',
+        //   name: '地图3D',
+        //   component: () => import(/* webpackChunkName: "charts" */ '@/views/system/charts/map-3d/index.vue')
+        // }
       ]
     },
     {
