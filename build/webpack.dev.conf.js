@@ -66,8 +66,8 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     new CopyWebpackPlugin([
       {
     	  from: path.resolve(__dirname, '../src/static/js'),
-          to: config.build.assetsSubDirectory + "/js",
-          ignore: ['.*']
+        to: config.build.assetsSubDirectory + '/js',
+        ignore: ['.*']
       }
     ]),
     //提供全局的变量，在模块中使用无需用require引入
@@ -96,8 +96,8 @@ module.exports = new Promise((resolve, reject) => {
           messages: [`Your application is running here: http://${devWebpackConfig.devServer.host}:${port}`],
         },
         onErrors: config.dev.notifyOnErrors
-        ? utils.createNotifierCallback()
-        : undefined
+          ? utils.createNotifierCallback()
+          : undefined
       }))
 
       resolve(devWebpackConfig)
